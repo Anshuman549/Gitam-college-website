@@ -1,0 +1,1322 @@
+/********** Common CSS Starts **********/  
+html, body {
+    font-family: Roboto, sans-serif, arial;
+    font-size: 14px;
+    color: #242424;
+    font-weight: 400;
+}
+html {
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    font-size:10px;
+    -webkit-tap-highlight-color:transparent 
+}
+* {
+    margin:0px;
+    padding:0px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    outline:0 
+}
+
+
+
+  #splash {
+    background: #15465e;
+    background-repeat: repeat-y;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: splash 3s ease-in;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    z-index: 50;
+  }
+  
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,0);
+  }
+  
+  #loader:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    bottom: -170px;
+    width: 3px;
+    background: #fff;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    height: 200px;
+  }
+  
+  #loader:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: 8px;
+    bottom: -190px;
+    width: 3px;
+    background: #000;
+    background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+    height: 200px;
+  }
+  
+  #splash .anim {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    transform: translate(-50%,100%);
+    animation: loader 4s linear;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: translate(-50%,110%);
+    }
+    30% {
+      transform: translate(-50%,50%);
+    }
+    100% {
+      transform: translate(-50%,0%);
+    }
+  }
+  
+  @keyframes splash {
+    0% {
+      transform: translate(0%,0%);
+    }
+    50% {
+      transform: translate(0%,0%);
+    }
+    100% {
+      transform: translate(0%,-100%);
+    }
+  }
+  
+
+
+.container {
+    margin:0px auto;
+    display:table;
+    max-width: 1150px;
+}
+.width-100 {
+    width:100%;
+    float:left;
+}
+.width-50 {
+    width:50%;
+    float:left;
+}
+.width-25 {
+    width:25%;
+    float:left;
+}
+.width-75 {
+    width:75%;
+    float:left;
+}
+.width-80 {
+    width:80%;
+    float:left;
+}
+.width-60 {
+    width:60%;
+    float:left;
+}
+.width-40 {
+    width:40%;
+    float:left;
+}
+.width-33 {
+    width:33%;
+    float:left;
+}
+.width-30 {
+    width:30%;
+    float:left;
+}
+.width-20 {
+    width:20%;
+    float:left;
+}
+.main-section {
+    width:100%;
+    float:left;
+    padding-top:40px;
+    padding-bottom:40px;
+}
+.bg-grey {
+    background:#f0f3fa;
+    background-image: url('https://wallpapertag.com/wallpaper/full/5/3/f/28355-old-paper-background-4500x3090-retina.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.heading-section {
+    font-size: 25px;
+    text-align: center;
+}
+.heading-section span {
+    color: #15465e;
+}
+.subhead-section {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+/********** Common CSS Ends **********/
+
+/********** Top Header Starts **********/  
+/****************HEADER SECTION****************/
+.banner {
+    width:100%;
+    border-top:1px solid #cccfff;
+}
+.notification {
+    width: 100%;
+    float: left;
+    padding: 12px;
+    background: #15465e;
+}
+.notification b {
+    color: red;
+    font-size: 18px;
+    float: left;
+    position: absolute;
+    background: #15465e;
+    z-index: 40;
+}
+.notification marquee {
+    list-style:none;
+    font-size: 16px;
+    color: aliceblue;
+}
+.notification marquee img {
+    height:16px;
+}
+
+@media screen and (min-width: 1024px){
+    .notification{
+    width: 100%;
+    }
+}
+/********** Top Header Ends **********/
+
+/********** Logo And Menu CSS Starts **********/  
+/**********LOGO SECTION**********/
+.logo {
+	height: 120px;
+}
+@media screen and (min-width: 768px) 
+    and (max-width: 1070px){
+        .logo{
+            height: 100px;
+            width: 170px;
+        }
+    }
+@media screen and (min-width: 200px) 
+    and (max-width: 850px){
+        .logo{
+          height:100px;
+          width: 170px;
+        }
+    }
+/**********MENU SECTION**********/
+
+
+/* Clearing floats */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Main level */
+.menu {			
+  margin: 33px;
+  float: right;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;	
+}
+
+.menu > li {
+  background: #15465e;
+  float: left;
+  position: relative;
+  transform: skewX(25deg);
+  z-index: 11;
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}		
+
+.menu li:hover {
+  background: #e74c3c;
+}		
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+@media screen and (min-width: 768px) 
+    and (max-width: 1160px){
+        .menu > li >a{
+            padding: 10px 10px;
+        }
+    }
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #2a4552;
+  position: relative;
+  overflow: hidden;		
+}						
+
+.submenu > li > a {
+  padding: 1em 2em;			
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;			
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);			
+}		
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+    text-align: center;
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}				
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;			
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}		
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);			
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);			
+}
+
+
+/********** Logo And Menu CSS Ends **********/
+
+/********** Slider and Notification CSS Starts **********/  
+
+.main-wrapper{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+  }
+  .slider-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 100%;
+    position: absolute;
+    transition: transform .4s ease-in-out;
+  }
+  .slides img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: .3rem;
+  }
+  .slider-btns{
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 100;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .slider-btns span{
+    padding: 1rem 1.2rem;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.151);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+  .dots{
+    position: absolute;
+    width: 100%;
+    top: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    z-index: 1;
+  }
+  
+  .dots .dot{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    opacity: .2;
+    border-radius: 50%;
+    transition: opacity .2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width:950px) {
+    .slider-wrapper{
+      width: 70%;
+    }
+  }
+  
+  @media screen and (max-width:680px) {
+    .slider-wrapper{
+      width: 90%;
+    }
+  }
+
+/********** Slider and Notification CSS Ends **********/
+
+/********** About us CSS Starts **********/  
+.about-img img {
+    width:100%;
+    padding:0px 25px 0px 0px;
+}
+.about-detail h6 {
+    font-size:16px;
+    color: #15465e;
+}
+.about-detail h1 {
+    font-size: 32px;
+    margin:5px 0px 10px 0px;
+    color: #1f2836;
+}
+.about-detail h1 span {
+    color: #15465e;
+}
+.about-detail p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #1e1e1e;
+}
+.about-box {
+    width:94%;
+    float: left;
+    margin-right: 1%;
+    border-radius:5px;
+    padding: 15px 15px;
+    text-align:center;
+    margin-top:10px;
+    border: 2px solid #15465e;
+}
+.about-box img {
+    height:100px;
+}
+.about-box h5 {
+    font-size: 16px;
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+/********** About us CSS Ends **********/
+
+/********** Notice Bord and Upcoming Events CSS Starts **********/  
+.notice-board-sect {
+    background: #fff;
+    float: left;
+    margin: 0px auto;
+    display: table;
+    width: 98%;
+    border-radius: 30px;
+    padding: 15px 10px 20px 10px;
+}
+.notice-board-sect h2 {
+    font-size: 20px;
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+    float: left;
+    color: #15465e;
+}
+.notice-board {
+    width: 100%;
+    float: left;
+    border:3px solid #15465e;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.notice-board ul {
+    list-style:none;
+    width: 100%;
+    float:left;
+    padding:0px 10px 0px 5px;
+}
+.notice-board ul li {
+    width: 100%;
+    float:left;
+    font-size: 16px;
+    margin-bottom:20px;
+}
+.notice-board img {
+    margin-right: 5px;
+    margin-left: 5px;
+    width:35px;
+}
+.event-list {
+    width: 100%;
+    float: left;
+    padding:0px;
+}
+.event-list li {
+    width: 100%;
+    float: left;
+    box-shadow: 0px 0px 2px 0px #ffffff1f;
+    margin-bottom: 20px;
+    list-style: none;
+    padding: 10px 6px 10px 5px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+.event-date {
+    float: left;
+    width:85px;
+    text-align: center;
+    border:2px solid #15465e;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+.event-date h3 {
+    font-size: 18px;
+    padding-top: 0px;
+}
+.event-date p {
+    font-size: 14px;
+    background: #15465e;
+    color: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+.event-content {
+    float: left;
+    width: calc(100% - 90px);
+    padding: 0px 0px 0px 10px;
+}
+.event-content h5 {
+    font-size:18px;
+    margin-bottom: 6px;
+    color: #424242;
+    font-weight: 500;
+}
+.event-content a {
+    color: #15465e;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 50px;
+}
+.event-content p {
+    font-size: 16px;
+    border-top: 1px solid #e3e3e3;
+    margin-top: 8px;
+    padding-top: 9px;
+}
+/********** Notice Bord and Upcoming Events CSS Ends **********/
+
+/********** Popular Courses CSS Starts **********/  
+.course-list {
+    width: 100%;
+    float:left;
+    padding:0px;
+    list-style:none;
+}
+.course-list li {
+    width: 23%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    padding: 20px 2px;
+    margin:1%;
+    border-radius:10px;
+}
+.course-list p {
+    color:#000;
+    font-size:18px;
+    margin-top:10px;
+    color: #fff;
+}
+.course-list i {
+    font-size:38px;
+    color: #fff;
+}
+ul.course-list li:nth-child(1) {
+    background: #2196f3;
+}
+ul.course-list li:nth-child(2) {
+    background: #ff5722;
+}
+ul.course-list li:nth-child(3) {
+    background: #8bc34a;
+}
+ul.course-list li:nth-child(4) {
+    background: #ff9800;
+}
+/********** Popular Courses CSS Ends **********/
+
+/********** Principal Info CSS Starts **********/  
+.principal-img img {
+    width:100%;
+    border:5px solid #15465e;
+    padding:4px 
+}
+.principal-info {
+    width: 100%;
+    float: left;
+    padding:30px;
+}
+.principal-info h6 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: black;
+}
+.principal-info h1 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.principal-info h1 span {
+    color: #15465e;
+}
+.principal-info h5 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    color:#000000;
+    font-family: cursive;
+}
+.principal-info p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 25px;
+    color:#1e1e1e;
+}
+.principal-info a {
+    background: #15465e;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 20px;
+    float: left;
+    border-radius: 5px;
+}
+/********** Principal Info CSS Ends **********/
+
+/********** Gallery CSS Starts **********/  
+.gallery {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+.gallery img {
+    height: 200px;
+    width: 98%;
+    margin-bottom: 10px;
+}
+/********** Gallery CSS Ends **********/
+
+/********** Achievement CSS Starts **********/  
+.counter {
+    text-align: center;
+    padding: 30px 20px 30px 20px;
+    width: 90%;
+    margin: 1%;
+    background: #15465e;
+    color: #fff;
+    border-radius:10px;
+}
+.counter i {
+    font-size:50px;
+}
+.counter h5 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+.counter p {
+    font-size:14px;
+}
+/********** Achievement CSS Ends **********/
+
+/********** Placement Company CSS Starts **********/  
+.placement p {
+    font-size: 16px;
+    color: #2a2a2a;
+    line-height: 30px;
+}
+.placement ul {
+    width: 100%;
+    float: left;
+    list-style:none;
+    padding:0px;
+    margin-top: 20px;
+}
+.placement ul li {
+    width: 24%;
+    float: left;
+    margin-right: 1%;
+}
+.placement ul li img {
+    width: 100%;
+    border: 1px solid darkgrey;
+}
+.placement-img {
+    width:100%;
+    padding:0px 30px 30px 30px;
+}
+/********** Placement Company CSS Ends **********/
+
+/********** Testimonial CSS Starts **********/  
+.tetimonial {
+    width: 340px;
+    background: white;
+    border: 1px solid rgb(0 0 0/10%);
+    padding: 35px 15px;
+    float: left;
+    margin-right:10px;
+}
+.tetimonial img {
+    border-radius:50%;
+    width:100%;
+}
+.tetimonial .width-100 .width-20 img{
+    margin-left: 0px;
+
+}
+.tetimonial-user {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.tetimonial-user h4 {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+.tetimonial-user p {
+    color: #818385;
+    font-size: 12px;
+}
+.tetimonial .fa-quote-right {
+    font-size:40px;
+    margin-top: 5px;
+    color:#15465e;
+}
+.testimonial-comment {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+.testimonial-comment h4 {
+    color: #15465e;
+    font-size: 20px;
+    margin-bottom:15px;
+}
+.testimonial-comment p {
+    font-size: 15px;
+    margin-bottom:20px;
+    ;
+    line-height: 25px;
+    color:#1f2836;
+}
+.testimonial-comment i {
+    color:#ff5722;
+    font-size:18px;
+}
+/********** Testimonial CSS Ends **********/
+
+/********** Footer CSS Starts **********/  
+.footer-section {
+    padding-top: 50px;
+    padding-bottom:20px;
+    background: #15465e;
+    width: 100%;
+    float: left;
+}
+.footer-section h3 {
+    font-size:28px;
+    color:#fff;
+}
+.footer-section p {
+    font-size: 14px;
+    line-height: 25px;
+    color: #fff;
+    margin-top: 20px;
+    padding: 0px 30px 0px 0px;
+}
+.footer-about i {
+    border: 1px solid #e5e3e3;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top:20px;
+    background: #fff;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #15465e;
+}
+.quick-link ul {
+    margin-top:30px;
+    list-style:none;
+    float:left;
+    width: 100%;
+}
+.quick-link li {
+    width: 50%;
+    float:left;
+    margin-bottom: 10px;
+}
+.quick-link li a {
+    font-size:14px;
+    color:#fff;
+    text-decoration:none;
+}
+.subscribe-us input {
+    margin-top:20px;
+    padding: 10px;
+    border: 1px solid #e5e3e3;
+    border-radius: 5px;
+    width: 100%;
+    color: #000000;
+    text-align: left;
+    background: #fff;
+    height: 42px;
+}
+.subscribe-us button {
+    padding: 12px;
+    background: #ff5722;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    border: none;
+}
+/********** Footer CSS Ends **********/
+
+/********** Footer Copyright CSS Starts **********/  
+.copyright {
+    text-align: center;
+    border-top: 1px solid #b3b3b3;
+    margin-top: 30px;
+    padding-top:20px;
+    color: #fff;
+}
+/********** Footer Copyright CSS Ends **********/
+
+
+
+
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: black;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+
+  @media screen and (min-width: 200px) and (max-width:840px) {
+    .content2{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .width-60{
+      width: 100%;
+      text-align: center;
+    }
+    .width-50{
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+    .course-list p{
+      font-size: 12px;
+    }
+    .width-25 {
+      width: 100%;
+      float: left;
+      text-align: -webkit-center;
+  }
+  .width-33 {
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+  .gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    .principal-info a{
+      float: none;
+      text-align: center;
+    }
+    .width-30{
+      width: 100%;
+      float: left;
+      padding-left: 15px;
+    }
+    .menu-button-container {
+      display: flex;
+      float: right;
+      padding: 45px 20px 0px 0px;
+    }
+    .main-wrapper{
+      height: 180px;
+      width: 100%;
+    }
+    .main-section{
+      padding-top: 0;
+    }
+    .slider-wrapper{
+      width: 100%;
+    }
+    .dots{
+      top: 85%;
+    }
+    .about-img img{
+      padding: 0;
+    }
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .menu li {
+        border: 1px solid #333;
+        height: 3.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+      }
+      .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
+      .width-40{
+        width: 100%;
+      }
+      .containers{
+        width: 5;
+        margin: auto;
+    }
+    }
+  
+
+
+
+
+
+
+
+
+    .containers{
+        position: relative;
+        width: 800px;
+        min-width: 350px;
+        min-height: 250px;
+        padding-bottom: 40px;
+        overflow: hidden;
+    }
+    
+    .wrapper{
+        width: 400%;
+        /* 300% 'caz we have 3 cards */
+        min-height: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: 1s;
+    }
+    
+    .card{
+        width: 800px;
+        min-height: 100%;
+        border: 2px solid;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .card-thumb{
+        width: 70%;
+        height: 250px;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: relative;
+    }
+    
+    .client-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .client-name{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        padding: 5px 20px;
+        background: white;
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+    
+    .card-body{
+        width: 120%;
+        min-height: 100%;
+        height: auto;
+        margin-left: 20px;
+        position: relative;
+        padding-bottom: 50px;
+    }
+    
+    .review{
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    
+    .rating{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .star{
+        width: 25px;
+        margin-right: 5px;
+    }
+    
+    .indicators{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .indicators button{
+        background: none;
+        border: none;
+        outline: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #171414;
+        cursor: pointer;
+        margin-left: 5px;
+        transition: .5s;
+    }
+    
+    button.active{
+        width: 40px;
+        border-radius: 50px;
+        background: #e2d9d9;
+    }
+    
+    @media screen and (min-width: 200px) and (max-width:800px){
+        .containers{
+            width: 5;
+            margin: auto;
+        }
+        .card{
+            flex-direction: column;
+        }
+        .card-thumb{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card-body{
+            width: 100%;
+            min-height: auto;
+            margin-left: 0;
+        }
+    }
+    @media screen and (min-width: 100px) and (max-width:400px){
+        .containers{
+            min-width: 250;
+        }
+    }
+
+    header{
+      position: relative;
+      width: 100%;
+      min-height: 66px;
+      background: white;
+      padding: 0 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo{
+      color: #fff;
+      font-size: 1.75em;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .logo img{
+      height: 110px;
+    }
+    header ul{
+      position: relative;
+    }
+    header ul li{
+      position: relative;
+      list-style: none;
+      float: left;
+    }
+    header ul li a{
+      color: #312f2f;
+      font-size: 1.1em;
+      padding: 20px 25px;
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    header ul li a:hover{
+      background: #f5f5f6;
+    
+    }
+    header ul li ul{
+      position: absolute;
+      left: 0;
+      width: 200px;
+      background: #c5cccf;
+      display: none;
+      z-index: 11;
+    }
+    header ul li:hover > ul{
+      display: block;
+    }
+    header ul li ul li{
+      position: relative;
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    header ul li ul li ul{
+      top: 0;
+      left: 200px;
+    }
+    @media (max-width: 900px) {
+      header{
+        padding: 10px 20px;
+      }
+      header nav{
+        position: absolute;
+        width: 100%;
+        top: 120px;
+        z-index: 11;
+        left: 0;
+        background: #445964;
+        display: none;
+      }
+      header.active nav{
+        display: initial;
+      }
+      header nav ul li{
+        width: 100%;
+      }
+      header nav ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+      }
+      header ul li ul li ul{
+        top: 0;
+        left: 0;
+      }
+      header nav ul li:hover ul li{
+        background: #546e7b;
+      }
+      .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #040404;
+        transform: translateY(-12px);
+        box-shadow: 0 12px #100e0e;
+      }
+      .menuToggle::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #0a0a0a;
+        transform: translateY(12px);
+      }
+      header.active .menuToggle::before{
+        transform: rotate(45deg);
+        box-shadow: 0 0 #000000;
+      }
+      header.active .menuToggle::after{
+        transform: rotate(315deg);
+      }
+    }
